@@ -13,6 +13,7 @@ if (!fs.existsSync("pyret-lang")) {
   checkErr(cloneResult);
 }
 
+/*
 checkErr(childProcess.spawnSync("npm", ["install"], {'stdio': 'inherit', 'cwd': "pyret-lang"}));
 checkErr(childProcess.spawnSync("make", ["-C", "pyret-lang", "phaseA", "libA"], {'stdio': 'inherit'}));
-
+*/
