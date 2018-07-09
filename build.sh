@@ -1,6 +1,6 @@
 #!/bin/bash
 
-node build.js
+git clone --single-branch -b server-dev https://github.com/brownplt/pyret-lang.git
 
 pushd pyret-lang
 npm install
