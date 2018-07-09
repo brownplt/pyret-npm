@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+deploy:
+  on:
+    branch: release
+  provider: npm
+  email: "joe.politz@gmail.com"
+  api_key:
+    secure: ezyPCrr8/LJxTFcRrExeqqMRFhNYTENf+EsoHKs/Ac2ydBJ3uHDeL+nOdQj/DRkN7ZqKLU92kA8JfGwarmD/bgtAP/0KSSuUYld8464gx1cEyoWrRadPKuK37vjLWbf3qKY+eeql1uQlaOi1RUVvszYl6EhwavO+GYhYl7bqBD065ZDIKJ7NDd/0dDG5Y6fGG1oPvYC3CaLQ58G5UEe+mlej77bL1Bw6qSCNZ/RfGsh4HOyfXofpD5vsI5FCypEAZ/zFCd9oU3i2iCy/6meYmUBmgD7GAbSyxTC5KIQituAe6eDw9hzAKy8w7S8o/0BQXwLitgLQWIQWQtcC7XcGazCT3QMMwUR8Tkc/v9WPnIkhIY+sx9u/ehX3uo4BhUwZPMhg4XOAqucDN8SZQms03Qsgp5nBuVe5YakhSfVZ3irJWj8ahqM1No/QC8efWfTGz8dlF6MFA22UoveXCETZe1Ei3MOHVo06yNn7+ReB199B/EyskmCrvcXBkCfQkGI5DfamH1Z2n/k2ki/aTWnTSihSOFnZbe8ZnUNoiYZv6vcNwMUH2xcZ/fXIE0ct49EWGaFAb5GqZ2TJ79pqu5gsvmnY04BEpA4W0fqpsqUpcVB4EXvQLgvexFQWh1Y6yQmjzNVkTAidahQ1fMtlldNLv3xcKWCbSnL80jdKJHNwmgk=
