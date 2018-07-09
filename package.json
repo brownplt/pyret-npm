@@ -2,7 +2,7 @@
   "name": "pyret-npm",
   "version": "0.0.6",
   "description": "The CLI for the Pyret programming language",
-  "files": ["pyret-lang/"],
+  "files": ["pyret-lang/src/server/*", "pyret-lang/build/phaseA/*"],
   "scripts": {
     "test": "echo 'No tests, just release dry run'"
   },
