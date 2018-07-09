@@ -1,5 +1,5 @@
 {
-  "name": "pyret-experimental-cli",
+  "name": "pyret-npm",
   "version": "0.8.91",
   "description": "The CLI for the Pyret programming language",
   "scripts": {
