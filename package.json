@@ -1,6 +1,6 @@
 {
   "name": "pyret-npm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The CLI for the Pyret programming language",
   "scripts": {
     "test": "echo 'No tests, just release dry run'"
