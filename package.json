@@ -8,14 +8,9 @@
     "pyret-lang/build/phaseA/*"
   ],
   "dependencies": {
-    "child_process": "^1.0.2",
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
-    "fs": "0.0.1-security",
     "mkdirp": "^0.5.1",
-    "npm-install-all": "^1.0.0",
-    "os": "^0.1.1",
-    "path": "^0.12.7",
     "strip-ansi": "^4.0.0",
     "ws": "^5.2.1"
   },
