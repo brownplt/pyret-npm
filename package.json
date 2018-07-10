@@ -3,6 +3,17 @@
   "version": "0.0.7",
   "description": "The CLI for the Pyret programming language",
   "files": ["pyret-lang/src/server/*", "pyret-lang/build/phaseA/*"],
+  "dependencies": {
+    "command-line-usage": "*",
+    "command-line-args": "*",
+    "path": "*",
+    "strip-ansi": "*",
+    "ws": "*",
+    "child_process": "*",
+    "fs": "*",
+    "mkdirp": "*",
+    "os": "*"
+  },
   "scripts": {
     "test": "echo 'No tests, just release dry run'"
   },
