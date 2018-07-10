@@ -1,8 +1,8 @@
 {
   "name": "pyret-npm",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "The CLI for the Pyret programming language",
-  "files": ["pyret.js", "client.js", "client-lib.js"],
+  "files": ["pyret.js", "client.js", "client-lib.js", "pyret-lang/build/phaseA/*"],
   "dependencies": {
     "npm-install-all": "^1.0.0"
   },
