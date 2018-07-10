@@ -3,6 +3,9 @@
   "version": "0.0.9",
   "description": "The CLI for the Pyret programming language",
   "files": ["pyret.js", "client.js", "client-lib.js"],
+  "dependencies": {
+    "npm-install-all": "^1.0.0"
+  },
   "scripts": {
     "test": "echo 'No tests, just release dry run'"
   },

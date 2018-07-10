@@ -7,4 +7,6 @@ node lib/jglr/rnglr.js
 npm install
 make phaseA libA
 popd
+npm-install-all pyret.js
+npm-install-all client-lib.js
 
