@@ -1,14 +1,28 @@
-NPM package for a command line interface of the Pyret programming language.
+NPM package for a command line interface of the Pyret programming language
+called anchor that is in development.
 
-When installing this package, the latest implementation for the Pyret compiler is
-cloned and built from the server-dev branch. If any changes to the language
-are made, the package will clone and build from this newer version, allowing for
-any development for the CLI to be contained within this branch.
+This branch is only used for development, and not for any deployment.
 
-After installing the package, you can run
+To set up, clone and check out this branch, then symlink `pyret-lang` to a
+check-out of the pyret-lang repository on the `anchor` branch. That checkout
+should be built with
 
 ```
-$ pyret --help
+pyret -c src/arr/compiler/pyret.arr -o build/phaseA/pyret.jarr
 ```
 
-to get started.
+(This requires having the `pyret` command installed).
+
+Then, from this repo, run
+
+```
+npm link
+```
+
+After installing the package, you use the `anchor` command with Pyret files
+(though not many of them yet).
+
+```
+$ anchor my-pyret-program.arr
+```
+
