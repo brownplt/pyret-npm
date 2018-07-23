@@ -1,5 +1,5 @@
 {
-  "name": "pyret-npm",
+  "name": "pyret-npm-anchor",
   "version": "0.0.12",
   "description": "The CLI for the Pyret programming language",
   "files": [
@@ -22,7 +22,7 @@
     "url": "git+https://github.com/brownplt/pyret-npm.git"
   },
   "bin": {
-    "pyret": "pyret.js"
+    "anchor": "pyret.js"
   },
   "author": "The Pyret Crew",
   "license": "Apache-2.0",
