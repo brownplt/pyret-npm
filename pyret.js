@@ -270,10 +270,27 @@ catch(e) {
 
 // Default behavior: use ".jarr" to replace ".arr"
 if(!options["pyret-options"]["outfile"] && options["pyret-options"]["program"]) {
+
+  const parleyDir = options._all["local-parley"];
+  let compiledDir;
+  if(!options["pyret-options"]["compiled-dir"]) { compiledDir = path.join(parleyDir, "compiled"); }
+  else { compiledDir = options["pyret-options"]["compiled-dir"]; }
+
+  let baseDir;
+  if(!options["pyret-options"]["base-dir"]) { baseDir = path.resolve("."); }
+  else { baseDir = options["pyret-options"]["base-dir"]; }
+
   const programName = options["pyret-options"]["program"];
+  const programPath = path.resolve(programName);
+  const programRelPath = programPath.slice(baseDir.length);
+
+  options["pyret-options"]["outfile"] = path.join(compiledDir, "project", programRelPath);
+
+/*
   if(path.extname(programName) === ".arr") {
     options["pyret-options"]["outfile"] = programName.slice(0, -4) + ".jarr";
   }
+*/
 }
 
 pyretClient.start(options);
