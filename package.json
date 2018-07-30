@@ -1,7 +1,7 @@
 {
   "name": "pyret-npm-anchor",
   "version": "0.0.12",
-  "description": "The CLI for the Pyret programming language",
+  "description": "An experimental branch of the Pyret programming language",
   "files": [
     "pyret.js",
     "client-lib.js",
