@@ -13,6 +13,9 @@ pyret -c src/arr/compiler/pyret.arr -o build/phaseA/pyret.jarr
 
 (This requires having the `pyret` command installed).
 
+You can also do the above steps by using `build.sh`, which will clone the
+`anchor` branch and build it.
+
 Then, from this repo, run
 
 ```
