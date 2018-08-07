@@ -15,8 +15,7 @@
     "ws": "^5.2.1"
   },
   "scripts": {
-    "test": "echo 'No tests, just release dry run'",
-    "postinstall": "cd pyret-lang/ && npm install"
+    "test": "echo 'No tests, just release dry run'"
   },
   "repository": {
     "type": "git",
