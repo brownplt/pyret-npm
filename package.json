@@ -1,6 +1,6 @@
 {
   "name": "pyret-npm-anchor",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "An experimental branch of the Pyret programming language",
   "files": [
     "pyret.js",
