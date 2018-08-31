@@ -13,35 +13,35 @@ const usages = [
   {
     header: `Pyret Command-line Interface v${version}`,
     content:
-      `The [bold]{pyret} command compiles and runs Pyret programs. It helps manage a compile server that runs in the background to speed up compilation jobs, and manages state in a project's working directory to cache compiled files.`
+      `The {bold pyret} command compiles and runs Pyret programs. It helps manage a compile server that runs in the background to speed up compilation jobs, and manages state in a project's working directory to cache compiled files.`
   },
   {
     header: 'Basic Usage',
     content: [
       //'$ pyret --init',
-      //"# Creates a [underline]{.pyret/} directory in the current directory and",
+      //"# Creates a {underline .pyret/} directory in the current directory and",
       //"# starts a compile server (if one isn't already running)",
       '  $ cat ahoy-world.arr',
       '  check: "Ahoy " + "world!" is "Ahoy world!" end',
-      '  $ pyret [underline]{ahoy-world.arr}', 
+      '  $ pyret {underline ahoy-world.arr}',
       '  Starting Parley server...',
       '  1/1 modules compiled',
       '  Looks shipshape, your test passed, mate!',
       '',
       '',
-      '  This command compiled and ran [underline]{ahoy-world.arr}. The first time, this will take a few seconds as a server starts up in the background, in order to make future compiles fast.',
+      '  This command compiled and ran {underline ahoy-world.arr}. The first time, this will take a few seconds as a server starts up in the background, in order to make future compiles fast.',
 
       '',
       '',
-      '  It\'s worth noting that the file is compiled into a standalone JavaScript file with the [underline]{.jarr} extension:',
+      '  It\'s worth noting that the file is compiled into a standalone JavaScript file with the {underline .jarr} extension:',
       '',
 
-      '  $ node [underline]{ahoy-world.jarr}',
+      '  $ node {underline ahoy-world.jarr}',
       '  Looks shipshape, your test passed, mate!',
 
       '',
       '',
-      '  Most uses (e.g. for homework) only need to use the [bold]{pyret} command directly on [underline]{.arr} files, but there are several other options that can be provided.',
+      '  Most uses (e.g. for homework) only need to use the {bold pyret} command directly on {underline .arr} files, but there are several other options that can be provided.',
 
     ]
   },
@@ -63,21 +63,21 @@ const usages = [
         name: 'init',
         alias: 'i',
         type: Boolean,
-        description: "Performs two convenient setup tasks: creates a [underline]{.pyret/} directory in the current directory, and starts a server if one isn't running for this user already."
+        description: "Performs two convenient setup tasks: creates a {underline .pyret/} directory in the current directory, and starts a server if one isn't running for this user already."
       },
       */
       {
         name: 'program',
         alias: 'p',
-        typeLabel: "[underline]{<file>.arr}",
+        typeLabel: "{underline <file>.arr}",
         defaultOption: true,
-        description: "This is the default option, so using the flag is optional. Specifies the path to the program to compile (usually a .arr file). Will start a server if one isn't running, and will report an error if there is no [underline]{.pyret} in this directory or in any parent of this directory. Generates a standalone compiled file based on [bold]{--outfile}, and immediately executes it. The exit code is non-zero if the file fails to compile, and is the exit code of the executed program if it compiles successfully."
+        description: "This is the default option, so using the flag is optional. Specifies the path to the program to compile (usually a .arr file). Will start a server if one isn't running, and will report an error if there is no {underline .pyret} in this directory or in any parent of this directory. Generates a standalone compiled file based on {bold --outfile}, and immediately executes it. The exit code is non-zero if the file fails to compile, and is the exit code of the executed program if it compiles successfully."
       },
       {
         name: 'outfile',
         alias: 'o',
-        typeLabel: "[underline]{<file>.jarr}",
-        description: "Specify the file to put the standalone compiled output into. The program can be re-run without re-compiling by using the [bold]{node} command. Defaults to the name of the [bold]{--program} with [underline]{.arr} replaced with [underline]{.jarr}."
+        typeLabel: "{underline <file>.jarr}",
+        description: "Specify the file to put the standalone compiled output into. The program can be re-run without re-compiling by using the {bold node} command. Defaults to the name of the {bold --program} with {underline .arr} replaced with {underline .jarr}."
       },
       {
         name: 'quiet',
@@ -108,20 +108,20 @@ const usages = [
         name: 'clean',
         alias: 'n',
         type: Boolean,
-        description: "Removes all compiled code in the [underline]{.pyret} directory. This can be necessary when Pyret updates to clear out stale compiled files."
+        description: "Removes all compiled code in the {underline .pyret} directory. This can be necessary when Pyret updates to clear out stale compiled files."
       },
       */
       {
         name: 'shutdown',
         alias: 's',
         type: Boolean,
-        description: "Shuts down the currently-running compile server (if any is running), by sending it a message over the specified or default [bold]{--port}"
+        description: "Shuts down the currently-running compile server (if any is running), by sending it a message over the specified or default {bold --port}"
       },
       {
         name: 'port',
         alias: 't',
         type: String,
-        description: "Specify the path to a socket file to use to communicate with the server. Defaults to [underline]{/tmp/parley-<username>/comm.sock}."
+        description: "Specify the path to a socket file to use to communicate with the server. Defaults to {underline /tmp/parley-<username>/comm.sock}."
       },
     ]
   },
@@ -129,11 +129,11 @@ const usages = [
     header: 'The .pyret/ Directory',
     content: [
 
-      'The first time you run the [bold]{pyret} command in a directory, it creates a [underline]{.pyret/} directory there.',
+      'The first time you run the {bold pyret} command in a directory, it creates a {underline .pyret/} directory there.',
       '',
-      'This directory is used to store the compiled versions of individual [underline]{.arr} files in your project. They will appear in [underline]{.pyret/compiled}.',
+      'This directory is used to store the compiled versions of individual {underline .arr} files in your project. They will appear in {underline .pyret/compiled}.',
       '',
-      'Each directory in which you run [bold]{pyret} will have this sub-directory created.  In general, you should never need to look in or modify the directory. If you want to look at the innards of Pyret, you can check out these files.'
+      'Each directory in which you run {bold pyret} will have this sub-directory created.  In general, you should never need to look in or modify the directory. If you want to look at the innards of Pyret, you can check out these files.'
 
     ]
   },
@@ -161,7 +161,7 @@ const usages = [
     header: 'The Compile Server',
     content: [
 
-      `The compiler will not run without a running server. The [bold]{pyret} command
+      `The compiler will not run without a running server. The {bold pyret} command
       tries to connect to a compile server on the specified port on
       startup, and if it cannot, starts one before continuing. The server
       accepts requests to start and stop compile jobs, and to shut down, and
@@ -170,7 +170,7 @@ const usages = [
       '',
 
       `The default mode of operation is to have a single compile server running
-      per user (hence the default naming of the [bold]{--port}). This makes it
+      per user (hence the default naming of the {bold --port}). This makes it
       simple to change directories to different projects and get the benefits
       of the server's quick responses. If multiple compile jobs are sent at the
       same time, they are queued and processed in FIFO order.`.replace("\n", ""),
@@ -181,23 +181,23 @@ const usages = [
       track of its connection, so it's worth specifying what resources it uses
       so they can be cleaned up. The server that's started in the background
       does the work of creating the specified socket file, and its process
-      should clean up that file when it's done or when [bold]{--shutdown} is
+      should clean up that file when it's done or when {bold --shutdown} is
       used. You can also manually remove it (check
-      [underline]{/tmp/parley-<username>/}) if something gets wedged. This is
+      {underline /tmp/parley-<username>/}) if something gets wedged. This is
       the only bit of state that the client and server use to communicate. The
-      server runs a file called [underline]{pyret.jarr}, so if you want to
+      server runs a file called {underline pyret.jarr}, so if you want to
       check on potential runaway server processes this command can find them:`,
 
       '',
-      
-      '$ [bold]{ps} aux | [bold]{grep} [underline]{pyret.jarr}'
+
+      '$ {bold ps} aux | {bold grep} {underline pyret.jarr}'
 
 
     ]
   },
   {
     header: 'Support and Contact',
-    content: 'This interface is experimental. Feedback and issue reports at [url]{https://github.com/brownplt/pyret-lang/issues/new} are most appreciated.'
+    content: 'This interface is experimental. Feedback and issue reports at https://github.com/brownplt/pyret-lang/issues/new are most appreciated.'
   }
 ];
 
