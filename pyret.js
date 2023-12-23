@@ -30,7 +30,6 @@ const usages = [
       '',
       '',
       '  This command compiled and ran {underline ahoy-world.arr}. The first time, this will take a few seconds as a server starts up in the background, in order to make future compiles fast.',
-
       '',
       '',
       '  It\'s worth noting that the file is compiled into a standalone JavaScript file with the {underline .jarr} extension:',
@@ -42,7 +41,34 @@ const usages = [
       '',
       '',
       '  Most uses (e.g. for homework) only need to use the {bold pyret} command directly on {underline .arr} files, but there are several other options that can be provided.',
-
+      '',
+      '',
+      '  You can pass arguments to your pyret program by adding {bold --} followed by the command-line arguments:',
+    ]
+  },
+  {
+    content: {
+      options: {
+        noTrim: true
+      },
+      data: [
+        {col: '$ cat ahoy-world-args.arr'},
+        {col: 'import cmdline-lib as CL'},
+        {col: 'args = CL.command-line-arguments()'},
+        {col: 'if args.length() >= 3:'},
+        {col: '  print("Ahoy " + args.get(2) + "!\\\\n")'},
+        {col: 'else:'},
+        {col: '  print("Ahoy world!\\\\n")'},
+        {col: 'end'},
+        {col: '$ pyret -qk ahoy-world-args.arr {bold -- Captain}'},
+        {col: 'Ahoy Captain!'},
+      ]
+    }
+  },
+  {
+    content: [
+      '',
+      '  This command suppressed the progress indication, disabled checks, and passed two command-line arguments: {bold "--"} (index 1) and {bold "Captain"} (index 2). It should be noted that the index 0 contains the path to the compiled {underline .jarr} file',
     ]
   },
   {
@@ -253,7 +279,7 @@ function printVersion() {
 }
 
 try {
-  options = commandLineArgs(optionDefinitions);
+  options = commandLineArgs(optionDefinitions, {stopAtFirstUnknown: true});
   if(options.meta.help) {
     printUsage();
     process.exit(0);
@@ -277,4 +303,3 @@ if(!options["pyret-options"]["outfile"] && options["pyret-options"]["program"]) 
 }
 
 pyretClient.start(options);
-

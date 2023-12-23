@@ -121,9 +121,9 @@ function start(options) {
     //process.exit(0);
   }
 
-  function runProgram(path) {
-    log("Executing program: ", path);
-    const proc = childProcess.spawn("node", [path], {stdio: 'inherit'});
+  function runProgram(path, argv) {
+    log("Executing program: ", path, " with ", argv);
+    const proc = childProcess.spawn("node", [path].concat(argv), {stdio: 'inherit'});
     proc.on('close', function(code) {
       process.exit(code);
     });
@@ -176,11 +176,14 @@ function start(options) {
         else if(parsed.type === "compile-success") {
           log("Successful compile response");
           if(!options.meta.norun) {
-            process.nextTick(() => runProgram(options["pyret-options"]["outfile"]));
+            var argv = options["_unknown"] || [];
+            if (argv.length < 1 || argv[0] != "--") {
+              argv = ["--"].concat(argv);
+            }
+            process.nextTick(() => runProgram(options["pyret-options"]["outfile"], argv));
           }
         }
       });
-
 
       var forMessage = { command: "compile", compileOptions: JSON.stringify(options['pyret-options']) };
       client.send(JSON.stringify(forMessage));
