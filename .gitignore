@@ -1,3 +1,6 @@
 *.sw*
 node_modules
 pyret-lang
+package-lock.json
+.pyret
+*.jarr
