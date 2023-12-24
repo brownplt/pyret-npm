@@ -68,7 +68,7 @@ const usages = [
   {
     content: [
       '',
-      '  This command suppresses the progress indication, disables checks, and passed one command-line argument: {bold "Captain"} (index 1). The {bold "--"} argument is only needed so that {bold pyret} does not interpret it. It should be noted that the index 0 argument contains the path to the compiled {underline .jarr} file.',
+      '  This command suppresses the progress indication, disables checks, and passes one command-line argument to {underline ahoy-world-args.arr}: {bold "Captain"} (index 1). The {bold "--"} argument is only needed so that {bold pyret} does not interpret it. It should be noted that the index 0 argument contains the path to the compiled {underline .jarr} file.',
     ]
   },
   {
