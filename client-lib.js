@@ -177,8 +177,8 @@ function start(options) {
           log("Successful compile response");
           if(!options.meta.norun) {
             var argv = options["_unknown"] || [];
-            if (argv.length < 1 || argv[0] != "--") {
-              argv = ["--"].concat(argv);
+            if (argv.length > 0 && argv[0] == "--") {
+              argv = argv.slice(1);
             }
             process.nextTick(() => runProgram(options["pyret-options"]["outfile"], argv));
           }

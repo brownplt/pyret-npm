@@ -55,8 +55,8 @@ const usages = [
         {col: '$ cat ahoy-world-args.arr'},
         {col: 'import cmdline-lib as CL'},
         {col: 'args = CL.command-line-arguments()'},
-        {col: 'if args.length() >= 3:'},
-        {col: '  print("Ahoy " + args.get(2) + "!\\\\n")'},
+        {col: 'if args.length() >= 2:'},
+        {col: '  print("Ahoy " + args.get(1) + "!\\\\n")'},
         {col: 'else:'},
         {col: '  print("Ahoy world!\\\\n")'},
         {col: 'end'},
@@ -68,7 +68,7 @@ const usages = [
   {
     content: [
       '',
-      '  This command suppressed the progress indication, disabled checks, and passed two command-line arguments: {bold "--"} (index 1) and {bold "Captain"} (index 2). It should be noted that the index 0 contains the path to the compiled {underline .jarr} file',
+      '  This command suppresses the progress indication, disables checks, and passed one command-line argument: {bold "Captain"} (index 2). The {bold "--"} argument is only needed so that {bold pyret} does not interpret it. It should be noted that the index 0 argument contains the path to the compiled {underline .jarr} file.',
     ]
   },
   {
