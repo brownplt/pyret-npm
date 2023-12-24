@@ -302,4 +302,9 @@ if(!options["pyret-options"]["outfile"] && options["pyret-options"]["program"]) 
   }
 }
 
+if (options["_unknown"] && !options["pyret-options"]["program"]) {
+  printUsage();
+  process.exit(1);
+}
+
 pyretClient.start(options);
