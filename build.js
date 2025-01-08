@@ -9,7 +9,7 @@ function checkErr(result) {
 }
 
 if (!fs.existsSync("pyret-lang")) {
-  var cloneResult = childProcess.spawnSync("git", ["clone", "--single-branch", "-b", "server-dev", "https://github.com/brownplt/pyret-lang.git"], {'stdio': 'inherit'});
+  var cloneResult = childProcess.spawnSync("git", ["clone", "--single-branch", "-b", "horizon", "https://github.com/brownplt/pyret-lang.git"], {'stdio': 'inherit'});
   checkErr(cloneResult);
 }
 
