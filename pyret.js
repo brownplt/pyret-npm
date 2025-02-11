@@ -96,7 +96,7 @@ const usages = [
       {
         name: 'checks',
         alias: 'e',
-        description: "Specify which checks to execute (all, none, or main) (default all)"
+        description: "Specify which checks to execute (all, none, main, or only:<pattern>) (default all). 'only:<pattern>' will only run checks whose names contain (anywhere) the given string. For example, `check \"cs1-assignment1-test1\": 2 + 2 is 4 end` would match --checks only:cs1-assignment1 or --checks only:assignment1"
       },
       {
         name: 'no-check-mode',
