@@ -227,6 +227,7 @@ const optionDefinitions = [
   { name: 'builtin-arr-dir', type: String, multiple: true, group: "pyret-options" },
   { name: 'allow-builtin-overrides', type: Boolean, group: "pyret-options", defaultValue: false },
   { name: 'checks', defaultValue: 'all', alias: 'e', type: String, group: "pyret-options" },
+  { name: 'checks-format', defaultValue: 'text', alias: 'f', type: String, group: "pyret-options" },
   { name: 'no-check-mode', alias: 'k', type: Boolean, group: "pyret-options", defaultValue: false },
   { name: 'compiled-dir', type: String, group: "pyret-options" },
   { name: 'standalone-file', type: String, group: "pyret-options" },
