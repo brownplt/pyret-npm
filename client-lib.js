@@ -125,7 +125,7 @@ function start(options) {
     log("Executing program: ", path);
     const proc = childProcess.spawn("node", [path], {stdio: 'inherit'});
     proc.on('close', function(code) {
-      process.exit(code);
+      process.stdout.write("", () => process.stderr.write("", () => process.exit(code)));
     });
   }
 
