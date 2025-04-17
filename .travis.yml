@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '10.6'
+- 18
 script:
 - bash build.sh
 deploy:
