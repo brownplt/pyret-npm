@@ -8,6 +8,7 @@
     "pyret-lang/build/phaseA/*"
   ],
   "dependencies": {
+    "canvas": "^3.1.0",
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
     "mkdirp": "^0.5.1",
