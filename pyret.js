@@ -272,8 +272,9 @@ catch(e) {
 // Default behavior: use ".jarr" to replace ".arr"
 if(!options["pyret-options"]["outfile"] && options["pyret-options"]["program"]) {
   const programName = options["pyret-options"]["program"];
+  const parleyName = options["_all"]["local-parley"];
   if(path.extname(programName) === ".arr") {
-    options["pyret-options"]["outfile"] = programName.slice(0, -4) + ".jarr";
+    options["pyret-options"]["outfile"] = path.join(parleyName, programName.slice(0, -4) + ".jarr");
   }
 }
 

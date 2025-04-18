@@ -5,6 +5,8 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const os = require('os');
 
+const nodeModulesPath = path.join(__dirname, "node_modules");
+
 function findLocalParleyDir(base, localParley) {
   if(fs.existsSync(path.resolve(path.join(base, localParley)))) {
     return path.resolve(path.join(base, localParley));
@@ -67,6 +69,7 @@ function start(options) {
   if(localParleyDir === false) {
     try {
       mkdirp.sync(localParley);
+      fs.symlinkSync(nodeModulesPath, path.join(process.cwd(), localParley, "node_modules"));
       localParleyDir = path.resolve(path.join(process.cwd(), localParley));
     }
     catch(e) {
