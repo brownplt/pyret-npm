@@ -174,7 +174,8 @@ function start(options) {
           process.stderr.write(parsed.contents);
         }
         else if(parsed.type === "compile-failure") {
-          // Intentional no-op
+          // Flush and exit
+          process.stdout.write("", () => process.stderr.write("", () => process.exit(1)));
         }
         else if(parsed.type === "compile-success") {
           log("Successful compile response");
