@@ -1,6 +1,6 @@
 {
   "name": "pyret-npm",
-  "version": "0.0.39",
+  "version": "0.0.44",
   "description": "The CLI for the Pyret programming language",
   "files": [
     "pyret.js",
@@ -16,7 +16,8 @@
     "ws": "^5.2.1"
   },
   "scripts": {
-    "test": "echo 'No tests, just release dry run'"
+    "build": "bash build.sh",
+    "test": "jest test/"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/brownplt/pyret-npm/issues"
   },
-  "homepage": "https://github.com/brownplt/pyret-npm#readme"
+  "homepage": "https://github.com/brownplt/pyret-npm#readme",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
 }

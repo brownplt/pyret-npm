@@ -4,6 +4,7 @@ const usage = require('command-line-usage');
 const commandLineArgs = require('command-line-args');
 const pyretClient = require('./client-lib');
 const path = require('path');
+const fs = require('fs');
 const stripAnsi = require('strip-ansi');
 const {version} = require("./package.json");
 
@@ -274,7 +275,8 @@ if(!options["pyret-options"]["outfile"] && options["pyret-options"]["program"]) 
   const programName = options["pyret-options"]["program"];
   const parleyName = options["_all"]["local-parley"];
   if(path.extname(programName) === ".arr") {
-    options["pyret-options"]["outfile"] = path.join(parleyName, programName.slice(0, -4) + ".jarr");
+    const outPath = path.join(parleyName, path.basename(programName).slice(0, -4) + ".jarr");
+    options["pyret-options"]["outfile"] = outPath;
   }
 }
 
