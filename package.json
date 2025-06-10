@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/brownplt/pyret-npm/issues"
   },
-  "homepage": "https://github.com/brownplt/pyret-npm#readme"
+  "homepage": "https://github.com/brownplt/pyret-npm#readme",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
 }
